@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Industrial Automation Knowledge Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #network { width: 100%; height: 600px; border: 1px solid #ddd; }
+        .stats { background: #f5f5f5; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Industrial Automation Knowledge Graph</h1>
+    <div class="stats">
+        <h3>Graph Statistics</h3>
+        <p>Nodes: 30, Edges: 108, Employees: 3</p>
+        <p>Average Confidence: 83.97%</p>
+    </div>
+    <div id="network"></div>
+
+    <script>
+        const nodes = [
+            { id: "iec61131", label: "IEC 61131-3", color: "#4CAF50", title: "International standard for programmable controllers - programming languages (LD, FBD, ST, IL, SFC)", shape: "dot" },
+            { id: "iec61508", label: "IEC 61508", color: "#4CAF50", title: "Functional safety of electrical/electronic/programmable electronic safety-related systems", shape: "dot" },
+            { id: "iec61511", label: "IEC 61511", color: "#4CAF50", title: "Functional safety - Safety instrumented systems for the process industry sector", shape: "dot" },
+            { id: "isa88", label: "ISA-88", color: "#4CAF50", title: "Batch control standard - models and terminology for batch processes", shape: "dot" },
+            { id: "isa95", label: "ISA-95", color: "#4CAF50", title: "Enterprise-Control System Integration - defines terminology and models", shape: "dot" },
+            { id: "siemens_profinet", label: "Siemens Profinet Best Pra", color: "#2196F3", title: "Use MRP (Media Redundancy Protocol) for ring topology, dedicated switches, proper cable screening", shape: "dot" },
+            { id: "rockwell_modbus", label: "Rockwell Modbus Best Prac", color: "#2196F3", title: "Use Logix controllers with dedicated Ethernet ports, implement proper error handling", shape: "dot" },
+            { id: "abb_safety", label: "ABB Safety System Integra", color: "#2196F3", title: "Always perform SIL verification testing, use certified safety PLCs for SIL 2/3 applications", shape: "dot" },
+            { id: "sil_certification", label: "SIL Certification Process", color: "#2196F3", title: "Document all safety requirements, perform FMEDA analysis, validate with third-party certification", shape: "dot" },
+            { id: "emp_EMP001", label: "Jens Hansen", color: "#FF9800", title: "Senior PLC Engineer - Expertise: Siemens S7, PROFINET, SIL Safety", shape: "dot" },
+            { id: "emp_EMP002", label: "Lars Jensen", color: "#FF9800", title: "SCADA Specialist - Expertise: WinCC, OPC UA, HMI Design", shape: "dot" },
+            { id: "Kvaesthus_20260114_200227", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "hw_Siemens___WinCC", label: "Hardware: Siemens + WinCC", color: "#9C27B0", title: "Hardware combination: Siemens + WinCC", shape: "dot" },
+            { id: "risk_high", label: "Risk Level: HIGH", color: "#F44336", title: "Projects with significant overruns, safety issues, or major problems", shape: "dot" },
+            { id: "Kvaesthus_20260114_200552", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_201110", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_201606", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_202412", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "risk_critical", label: "Risk Level: CRITICAL", color: "#F44336", title: "Projects with severe overruns (>20%), safety failures, or system failures", shape: "dot" },
+            { id: "Kvaesthus_20260114_203756", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "risk_optimal", label: "Risk Level: OPTIMAL", color: "#F44336", title: "Unknown risk level", shape: "dot" },
+            { id: "Kvaesthus_20260114_205446", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "risk_medium", label: "Risk Level: MEDIUM", color: "#F44336", title: "Projects with some overruns or issues but manageable", shape: "dot" },
+            { id: "Kvaesthus_20260114_212151", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_212343", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_212920", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_214226", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "Kvaesthus_20260114_214718", label: "Project Kvaesthus_2026011", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+            { id: "emp_TEST001", label: "Test Engineer", color: "#FF9800", title: "PLC Engineer - Expertise: Siemens, PROFINET, Safety", shape: "dot" },
+            { id: "TEST_PROJ_001", label: "Project TEST_PROJ_001", color: "#607D8B", title: "water project with Siemens + WinCC", shape: "dot" },
+
+        ];
+
+        const edges = [
+            { from: "iec61508", to: "sil_certification", label: "supports", arrows: "to" },
+            { from: "iec61511", to: "sil_certification", label: "supports", arrows: "to" },
+            { from: "iec61131", to: "siemens_profinet", label: "enables", arrows: "to" },
+            { from: "iec61131", to: "rockwell_modbus", label: "enables", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_200227", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_200227", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_200552", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_200552", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_201110", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_201110", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_201606", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_201606", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "risk_critical", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_202412", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_202412", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "risk_optimal", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_203756", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_203756", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "risk_medium", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_205446", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_205446", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_212151", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212151", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_212343", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212343", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "risk_high", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_212920", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_212920", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "risk_critical", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_214226", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_214226", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "risk_medium", label: "has_risk_level", arrows: "to" },
+            { from: "emp_EMP001", to: "Kvaesthus_20260114_214718", label: "worked_on", arrows: "to" },
+            { from: "emp_EMP001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "Kvaesthus_20260114_214718", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "hw_Siemens___WinCC", label: "uses_hardware", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "risk_critical", label: "has_risk_level", arrows: "to" },
+            { from: "emp_TEST001", to: "TEST_PROJ_001", label: "worked_on", arrows: "to" },
+            { from: "emp_TEST001", to: "hw_Siemens___WinCC", label: "has_experience", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "siemens_profinet", label: "should_follow", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "abb_safety", label: "addresses_issue", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "sil_certification", label: "should_follow", arrows: "to" },
+            { from: "TEST_PROJ_001", to: "sil_certification", label: "addresses_issue", arrows: "to" },
+
+        ];
+
+        const container = document.getElementById('network');
+        const data = { nodes: nodes, edges: edges };
+        const options = {
+            physics: { stabilization: false },
+            nodes: { font: { size: 12 } },
+            edges: { font: { size: 10, align: 'middle' } }
+        };
+        new vis.Network(container, data, options);
+    </script>
+</body>
+</html>

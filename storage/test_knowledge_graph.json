@@ -1,0 +1,341 @@
+{
+  "nodes": {
+    "iec61131": {
+      "id": "iec61131",
+      "type": "standard",
+      "name": "IEC 61131-3",
+      "description": "International standard for programmable controllers - programming languages (LD, FBD, ST, IL, SFC)",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.885365",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61508": {
+      "id": "iec61508",
+      "type": "standard",
+      "name": "IEC 61508",
+      "description": "Functional safety of electrical/electronic/programmable electronic safety-related systems",
+      "confidence_score": 0.98,
+      "last_updated": "2026-01-15 12:44:06.885750",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61511": {
+      "id": "iec61511",
+      "type": "standard",
+      "name": "IEC 61511",
+      "description": "Functional safety - Safety instrumented systems for the process industry sector",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.886082",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa88": {
+      "id": "isa88",
+      "type": "standard",
+      "name": "ISA-88",
+      "description": "Batch control standard - models and terminology for batch processes",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:44:06.886413",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa95": {
+      "id": "isa95",
+      "type": "standard",
+      "name": "ISA-95",
+      "description": "Enterprise-Control System Integration - defines terminology and models",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:44:06.886745",
+      "metadata": {},
+      "relationships": []
+    },
+    "siemens_profinet": {
+      "id": "siemens_profinet",
+      "type": "best_practice",
+      "name": "Siemens Profinet Best Practices",
+      "description": "Use MRP (Media Redundancy Protocol) for ring topology, dedicated switches, proper cable screening",
+      "confidence_score": 0.88,
+      "last_updated": "2026-01-15 12:44:06.887075",
+      "metadata": {
+        "platform": "Siemens",
+        "protocol": "PROFINET"
+      },
+      "relationships": []
+    },
+    "rockwell_modbus": {
+      "id": "rockwell_modbus",
+      "type": "best_practice",
+      "name": "Rockwell Modbus Best Practices",
+      "description": "Use Logix controllers with dedicated Ethernet ports, implement proper error handling",
+      "confidence_score": 0.85,
+      "last_updated": "2026-01-15 12:44:06.887403",
+      "metadata": {
+        "platform": "Rockwell",
+        "protocol": "MODBUS"
+      },
+      "relationships": []
+    },
+    "abb_safety": {
+      "id": "abb_safety",
+      "type": "best_practice",
+      "name": "ABB Safety System Integration",
+      "description": "Always perform SIL verification testing, use certified safety PLCs for SIL 2/3 applications",
+      "confidence_score": 0.92,
+      "last_updated": "2026-01-15 12:44:06.887732",
+      "metadata": {
+        "platform": "ABB",
+        "safety": "SIL"
+      },
+      "relationships": []
+    },
+    "sil_certification": {
+      "id": "sil_certification",
+      "type": "best_practice",
+      "name": "SIL Certification Process",
+      "description": "Document all safety requirements, perform FMEDA analysis, validate with third-party certification",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.888058",
+      "metadata": {
+        "safety": "SIL",
+        "certification": true
+      },
+      "relationships": []
+    },
+    "emp_TEST001": {
+      "id": "emp_TEST001",
+      "type": "employee",
+      "name": "Test Engineer",
+      "description": "PLC Engineer - Expertise: Safety, Siemens, PROFINET",
+      "confidence_score": 0.16,
+      "last_updated": "2026-01-15 12:53:54.352771",
+      "metadata": {
+        "role": "PLC Engineer",
+        "expertise_areas": [
+          "Safety",
+          "Siemens",
+          "PROFINET"
+        ],
+        "hardware_experience": [
+          "WinCC",
+          "Siemens S7-1500"
+        ],
+        "certifications": [
+          "Siemens Certified"
+        ]
+      },
+      "relationships": []
+    },
+    "TEST_PROJ_001": {
+      "id": "TEST_PROJ_001",
+      "type": "project",
+      "name": "Project TEST_PROJ_001",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:53:54.354047",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 145.0,
+        "risk_level": "CRITICAL",
+        "issues": [
+          "PROFINET communication issues",
+          "SIL 2 certification delay"
+        ],
+        "solutions": [
+          "Upgraded network switches",
+          "Additional safety testing"
+        ]
+      },
+      "relationships": []
+    },
+    "hw_Siemens___WinCC": {
+      "id": "hw_Siemens___WinCC",
+      "type": "hardware",
+      "name": "Hardware: Siemens + WinCC",
+      "description": "Hardware combination: Siemens + WinCC",
+      "confidence_score": 0.8,
+      "last_updated": "2026-01-15 12:44:06.891182",
+      "metadata": {},
+      "relationships": []
+    },
+    "risk_critical": {
+      "id": "risk_critical",
+      "type": "risk",
+      "name": "Risk Level: CRITICAL",
+      "description": "Projects with severe overruns (>20%), safety failures, or system failures",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.891834",
+      "metadata": {},
+      "relationships": []
+    }
+  },
+  "edges": [
+    {
+      "source_id": "iec61508",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.888384"
+    },
+    {
+      "source_id": "iec61511",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.888713"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "siemens_profinet",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.889039"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "rockwell_modbus",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.889368"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.891508"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.892162"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "TEST_PROJ_001",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.892487"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-15 12:44:06.892863"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:44:06.893291"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:44:06.893635"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:44:06.894009"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:44:06.894389"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:53:54.354393"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:53:54.354737"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "TEST_PROJ_001",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:53:54.355082"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-15 12:53:54.355428"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:53:54.355776"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:53:54.356125"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:53:54.356469"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:53:54.356809"
+    }
+  ],
+  "employees": {
+    "TEST001": {
+      "employee_id": "TEST001",
+      "name": "Test Engineer",
+      "role": "PLC Engineer",
+      "expertise_areas": [
+        "Safety",
+        "Siemens",
+        "PROFINET"
+      ],
+      "hardware_experience": [
+        "WinCC",
+        "Siemens S7-1500"
+      ],
+      "project_history": [
+        "Test Project"
+      ],
+      "certifications": [
+        "Siemens Certified"
+      ],
+      "confidence_score": 0.16,
+      "last_active": "2026-01-15 12:53:54.352771"
+    }
+  },
+  "last_updated": "2026-01-15 12:53:54.357331"
+}

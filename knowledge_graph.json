@@ -1,0 +1,460 @@
+{
+  "nodes": {
+    "iec61131": {
+      "id": "iec61131",
+      "type": "standard",
+      "name": "IEC 61131-3",
+      "description": "International standard for programmable controllers - programming languages (LD, FBD, ST, IL, SFC)",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.885365",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61508": {
+      "id": "iec61508",
+      "type": "standard",
+      "name": "IEC 61508",
+      "description": "Functional safety of electrical/electronic/programmable electronic safety-related systems",
+      "confidence_score": 0.98,
+      "last_updated": "2026-01-15 12:44:06.885750",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61511": {
+      "id": "iec61511",
+      "type": "standard",
+      "name": "IEC 61511",
+      "description": "Functional safety - Safety instrumented systems for the process industry sector",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.886082",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa88": {
+      "id": "isa88",
+      "type": "standard",
+      "name": "ISA-88",
+      "description": "Batch control standard - models and terminology for batch processes",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:44:06.886413",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa95": {
+      "id": "isa95",
+      "type": "standard",
+      "name": "ISA-95",
+      "description": "Enterprise-Control System Integration - defines terminology and models",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:44:06.886745",
+      "metadata": {},
+      "relationships": []
+    },
+    "siemens_profinet": {
+      "id": "siemens_profinet",
+      "type": "best_practice",
+      "name": "Siemens Profinet Best Practices",
+      "description": "Use MRP (Media Redundancy Protocol) for ring topology, dedicated switches, proper cable screening",
+      "confidence_score": 0.88,
+      "last_updated": "2026-01-15 12:44:06.887075",
+      "metadata": {
+        "platform": "Siemens",
+        "protocol": "PROFINET"
+      },
+      "relationships": []
+    },
+    "rockwell_modbus": {
+      "id": "rockwell_modbus",
+      "type": "best_practice",
+      "name": "Rockwell Modbus Best Practices",
+      "description": "Use Logix controllers with dedicated Ethernet ports, implement proper error handling",
+      "confidence_score": 0.85,
+      "last_updated": "2026-01-15 12:44:06.887403",
+      "metadata": {
+        "platform": "Rockwell",
+        "protocol": "MODBUS"
+      },
+      "relationships": []
+    },
+    "abb_safety": {
+      "id": "abb_safety",
+      "type": "best_practice",
+      "name": "ABB Safety System Integration",
+      "description": "Always perform SIL verification testing, use certified safety PLCs for SIL 2/3 applications",
+      "confidence_score": 0.92,
+      "last_updated": "2026-01-15 12:44:06.887732",
+      "metadata": {
+        "platform": "ABB",
+        "safety": "SIL"
+      },
+      "relationships": []
+    },
+    "sil_certification": {
+      "id": "sil_certification",
+      "type": "best_practice",
+      "name": "SIL Certification Process",
+      "description": "Document all safety requirements, perform FMEDA analysis, validate with third-party certification",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.888058",
+      "metadata": {
+        "safety": "SIL",
+        "certification": true
+      },
+      "relationships": []
+    },
+    "emp_TEST001": {
+      "id": "emp_TEST001",
+      "type": "employee",
+      "name": "Test Engineer",
+      "description": "PLC Engineer - Expertise: Siemens, PROFINET, Safety",
+      "confidence_score": 0.16,
+      "last_updated": "2026-01-15 12:44:06.889697",
+      "metadata": {
+        "role": "PLC Engineer",
+        "expertise_areas": [
+          "Siemens",
+          "PROFINET",
+          "Safety"
+        ],
+        "hardware_experience": [
+          "Siemens S7-1500",
+          "WinCC"
+        ],
+        "certifications": [
+          "Siemens Certified"
+        ]
+      },
+      "relationships": []
+    },
+    "TEST_PROJ_001": {
+      "id": "TEST_PROJ_001",
+      "type": "project",
+      "name": "Project TEST_PROJ_001",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 12:44:06.890856",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 145.0,
+        "risk_level": "CRITICAL",
+        "issues": [
+          "PROFINET communication issues",
+          "SIL 2 certification delay"
+        ],
+        "solutions": [
+          "Upgraded network switches",
+          "Additional safety testing"
+        ]
+      },
+      "relationships": []
+    },
+    "hw_Siemens___WinCC": {
+      "id": "hw_Siemens___WinCC",
+      "type": "hardware",
+      "name": "Hardware: Siemens + WinCC",
+      "description": "Hardware combination: Siemens + WinCC",
+      "confidence_score": 0.8,
+      "last_updated": "2026-01-15 12:44:06.891182",
+      "metadata": {},
+      "relationships": []
+    },
+    "risk_critical": {
+      "id": "risk_critical",
+      "type": "risk",
+      "name": "Risk Level: CRITICAL",
+      "description": "Projects with severe overruns (>20%), safety failures, or system failures",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 12:44:06.891834",
+      "metadata": {},
+      "relationships": []
+    },
+    "emp_EMP001": {
+      "id": "emp_EMP001",
+      "type": "employee",
+      "name": "Jens Hansen",
+      "description": "Senior PLC Engineer - Expertise: Siemens S7, PROFINET, SIL Safety",
+      "confidence_score": 0.29000000000000004,
+      "last_updated": "2026-01-15 13:00:29.409056",
+      "metadata": {
+        "role": "Senior PLC Engineer",
+        "expertise_areas": [
+          "Siemens S7",
+          "PROFINET",
+          "SIL Safety"
+        ],
+        "hardware_experience": [
+          "Siemens S7-1500",
+          "WinCC",
+          "SEW Eurodrive"
+        ],
+        "certifications": [
+          "Siemens Certified",
+          "TÜV Functional Safety"
+        ]
+      },
+      "relationships": []
+    },
+    "emp_EMP002": {
+      "id": "emp_EMP002",
+      "type": "employee",
+      "name": "Lars Jensen",
+      "description": "SCADA Specialist - Expertise: WinCC, OPC UA, HMI Design",
+      "confidence_score": 0.16,
+      "last_updated": "2026-01-15 13:00:29.409834",
+      "metadata": {
+        "role": "SCADA Specialist",
+        "expertise_areas": [
+          "WinCC",
+          "OPC UA",
+          "HMI Design"
+        ],
+        "hardware_experience": [
+          "Siemens WinCC",
+          "Wonderware"
+        ],
+        "certifications": [
+          "Siemens WinCC Expert"
+        ]
+      },
+      "relationships": []
+    },
+    "proj_20260115_150125": {
+      "id": "proj_20260115_150125",
+      "type": "project",
+      "name": "Project proj_20260115_150125",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-15 15:01:25.648918",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": null,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "risk_high": {
+      "id": "risk_high",
+      "type": "risk",
+      "name": "Risk Level: HIGH",
+      "description": "Projects with significant overruns, safety issues, or major problems",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-15 15:01:25.649053",
+      "metadata": {},
+      "relationships": []
+    }
+  },
+  "edges": [
+    {
+      "source_id": "iec61508",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.888384"
+    },
+    {
+      "source_id": "iec61511",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.888713"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "siemens_profinet",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.889039"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "rockwell_modbus",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.889368"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.891508"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.892162"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "TEST_PROJ_001",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 12:44:06.892487"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-15 12:44:06.892863"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:44:06.893291"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:44:06.893635"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 12:44:06.894009"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 12:44:06.894389"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 15:01:25.648988"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-15 15:01:25.649062"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 15:01:25.649111"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 15:01:25.649136"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-15 15:01:25.649142"
+    },
+    {
+      "source_id": "proj_20260115_150125",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-15 15:01:25.649147"
+    }
+  ],
+  "employees": {
+    "TEST001": {
+      "employee_id": "TEST001",
+      "name": "Test Engineer",
+      "role": "PLC Engineer",
+      "expertise_areas": [
+        "Siemens",
+        "PROFINET",
+        "Safety"
+      ],
+      "hardware_experience": [
+        "Siemens S7-1500",
+        "WinCC"
+      ],
+      "project_history": [
+        "Test Project"
+      ],
+      "certifications": [
+        "Siemens Certified"
+      ],
+      "confidence_score": 0.16,
+      "last_active": "2026-01-15 12:44:06.889697"
+    },
+    "EMP001": {
+      "employee_id": "EMP001",
+      "name": "Jens Hansen",
+      "role": "Senior PLC Engineer",
+      "expertise_areas": [
+        "Siemens S7",
+        "PROFINET",
+        "SIL Safety"
+      ],
+      "hardware_experience": [
+        "Siemens S7-1500",
+        "WinCC",
+        "SEW Eurodrive"
+      ],
+      "project_history": [
+        "Kvæsthusbroen",
+        "Nordhavn"
+      ],
+      "certifications": [
+        "Siemens Certified",
+        "TÜV Functional Safety"
+      ],
+      "confidence_score": 0.29000000000000004,
+      "last_active": "2026-01-15 13:00:29.409056"
+    },
+    "EMP002": {
+      "employee_id": "EMP002",
+      "name": "Lars Jensen",
+      "role": "SCADA Specialist",
+      "expertise_areas": [
+        "WinCC",
+        "OPC UA",
+        "HMI Design"
+      ],
+      "hardware_experience": [
+        "Siemens WinCC",
+        "Wonderware"
+      ],
+      "project_history": [
+        "HOFOR Water Treatment"
+      ],
+      "certifications": [
+        "Siemens WinCC Expert"
+      ],
+      "confidence_score": 0.16,
+      "last_active": "2026-01-15 13:00:29.409834"
+    }
+  },
+  "last_updated": "2026-01-15 15:01:25.649453"
+}

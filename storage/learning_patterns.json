@@ -1,0 +1,14 @@
+[
+  {
+    "industry": "water",
+    "hardware_combination": "Siemens + WinCC",
+    "success_rate": 0.85,
+    "common_issues": [
+      "Profinet timing issues"
+    ],
+    "recommended_solutions": [
+      "Use dedicated network segments"
+    ],
+    "last_updated": "2026-01-14 19:17:43.145062"
+  }
+]

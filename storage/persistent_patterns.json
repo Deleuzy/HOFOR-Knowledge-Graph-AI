@@ -1,0 +1,31 @@
+[
+  {
+    "industry": "water",
+    "hardware_combination": "Siemens + WinCC",
+    "success_rate": 1.0,
+    "common_issues": [
+      "i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch",
+      "i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvens",
+      "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konf",
+      "med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfigu",
+      "skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsin"
+    ],
+    "recommended_solutions": [
+      ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O k",
+      "i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profine",
+      "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certific",
+      ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmitter",
+      "ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfi"
+    ],
+    "project_count": 19,
+    "last_updated": "2026-01-15 15:01:25.647997",
+    "risk_drivers": [
+      "profinet",
+      "sew",
+      "for",
+      "konfiguration",
+      "med",
+      "eurodrive"
+    ]
+  }
+]

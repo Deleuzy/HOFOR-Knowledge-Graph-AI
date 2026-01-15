@@ -1,0 +1,1396 @@
+{
+  "nodes": {
+    "iec61131": {
+      "id": "iec61131",
+      "type": "standard",
+      "name": "IEC 61131-3",
+      "description": "International standard for programmable controllers - programming languages (LD, FBD, ST, IL, SFC)",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.723672",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61508": {
+      "id": "iec61508",
+      "type": "standard",
+      "name": "IEC 61508",
+      "description": "Functional safety of electrical/electronic/programmable electronic safety-related systems",
+      "confidence_score": 0.98,
+      "last_updated": "2026-01-14 21:47:31.723697",
+      "metadata": {},
+      "relationships": []
+    },
+    "iec61511": {
+      "id": "iec61511",
+      "type": "standard",
+      "name": "IEC 61511",
+      "description": "Functional safety - Safety instrumented systems for the process industry sector",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.723700",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa88": {
+      "id": "isa88",
+      "type": "standard",
+      "name": "ISA-88",
+      "description": "Batch control standard - models and terminology for batch processes",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.723702",
+      "metadata": {},
+      "relationships": []
+    },
+    "isa95": {
+      "id": "isa95",
+      "type": "standard",
+      "name": "ISA-95",
+      "description": "Enterprise-Control System Integration - defines terminology and models",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.723703",
+      "metadata": {},
+      "relationships": []
+    },
+    "siemens_profinet": {
+      "id": "siemens_profinet",
+      "type": "best_practice",
+      "name": "Siemens Profinet Best Practices",
+      "description": "Use MRP (Media Redundancy Protocol) for ring topology, dedicated switches, proper cable screening",
+      "confidence_score": 0.88,
+      "last_updated": "2026-01-14 21:47:31.723705",
+      "metadata": {
+        "platform": "Siemens",
+        "protocol": "PROFINET"
+      },
+      "relationships": []
+    },
+    "rockwell_modbus": {
+      "id": "rockwell_modbus",
+      "type": "best_practice",
+      "name": "Rockwell Modbus Best Practices",
+      "description": "Use Logix controllers with dedicated Ethernet ports, implement proper error handling",
+      "confidence_score": 0.85,
+      "last_updated": "2026-01-14 21:47:31.723707",
+      "metadata": {
+        "platform": "Rockwell",
+        "protocol": "MODBUS"
+      },
+      "relationships": []
+    },
+    "abb_safety": {
+      "id": "abb_safety",
+      "type": "best_practice",
+      "name": "ABB Safety System Integration",
+      "description": "Always perform SIL verification testing, use certified safety PLCs for SIL 2/3 applications",
+      "confidence_score": 0.92,
+      "last_updated": "2026-01-14 21:47:31.723709",
+      "metadata": {
+        "platform": "ABB",
+        "safety": "SIL"
+      },
+      "relationships": []
+    },
+    "sil_certification": {
+      "id": "sil_certification",
+      "type": "best_practice",
+      "name": "SIL Certification Process",
+      "description": "Document all safety requirements, perform FMEDA analysis, validate with third-party certification",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.723711",
+      "metadata": {
+        "safety": "SIL",
+        "certification": true
+      },
+      "relationships": []
+    },
+    "emp_EMP001": {
+      "id": "emp_EMP001",
+      "type": "employee",
+      "name": "Jens Hansen",
+      "description": "Senior PLC Engineer - Expertise: Siemens S7, PROFINET, SIL Safety",
+      "confidence_score": 0.29000000000000004,
+      "last_updated": "2026-01-14 21:47:31.723736",
+      "metadata": {
+        "role": "Senior PLC Engineer",
+        "expertise_areas": [
+          "Siemens S7",
+          "PROFINET",
+          "SIL Safety"
+        ],
+        "hardware_experience": [
+          "Siemens S7-1500",
+          "WinCC",
+          "SEW Eurodrive"
+        ],
+        "certifications": [
+          "Siemens Certified",
+          "TÜV Functional Safety"
+        ]
+      },
+      "relationships": []
+    },
+    "emp_EMP002": {
+      "id": "emp_EMP002",
+      "type": "employee",
+      "name": "Lars Jensen",
+      "description": "SCADA Specialist - Expertise: WinCC, OPC UA, HMI Design",
+      "confidence_score": 0.16,
+      "last_updated": "2026-01-14 21:47:31.723757",
+      "metadata": {
+        "role": "SCADA Specialist",
+        "expertise_areas": [
+          "WinCC",
+          "OPC UA",
+          "HMI Design"
+        ],
+        "hardware_experience": [
+          "Siemens WinCC",
+          "Wonderware"
+        ],
+        "certifications": [
+          "Siemens WinCC Expert"
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_200227": {
+      "id": "Kvaesthus_20260114_200227",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_200227",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.723793",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "hw_Siemens___WinCC": {
+      "id": "hw_Siemens___WinCC",
+      "type": "hardware",
+      "name": "Hardware: Siemens + WinCC",
+      "description": "Hardware combination: Siemens + WinCC",
+      "confidence_score": 0.8,
+      "last_updated": "2026-01-14 21:47:31.723798",
+      "metadata": {},
+      "relationships": []
+    },
+    "risk_high": {
+      "id": "risk_high",
+      "type": "risk",
+      "name": "Risk Level: HIGH",
+      "description": "Projects with significant overruns, safety issues, or major problems",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.723803",
+      "metadata": {},
+      "relationships": []
+    },
+    "Kvaesthus_20260114_200552": {
+      "id": "Kvaesthus_20260114_200552",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_200552",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.724541",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_201110": {
+      "id": "Kvaesthus_20260114_201110",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_201110",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.725534",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_201606": {
+      "id": "Kvaesthus_20260114_201606",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_201606",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.726223",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_202412": {
+      "id": "Kvaesthus_20260114_202412",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_202412",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.727686",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 155.0,
+        "risk_level": "CRITICAL",
+        "issues": [
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "risk_critical": {
+      "id": "risk_critical",
+      "type": "risk",
+      "name": "Risk Level: CRITICAL",
+      "description": "Projects with severe overruns (>20%), safety failures, or system failures",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.727693",
+      "metadata": {},
+      "relationships": []
+    },
+    "Kvaesthus_20260114_203756": {
+      "id": "Kvaesthus_20260114_203756",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_203756",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.729537",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 100.0,
+        "risk_level": "OPTIMAL",
+        "issues": [
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          " ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "risk_optimal": {
+      "id": "risk_optimal",
+      "type": "risk",
+      "name": "Risk Level: OPTIMAL",
+      "description": "Unknown risk level",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.729553",
+      "metadata": {},
+      "relationships": []
+    },
+    "Kvaesthus_20260114_205446": {
+      "id": "Kvaesthus_20260114_205446",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_205446",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.731032",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 130.0,
+        "risk_level": "MEDIUM",
+        "issues": [
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "risk_medium": {
+      "id": "risk_medium",
+      "type": "risk",
+      "name": "Risk Level: MEDIUM",
+      "description": "Projects with some overruns or issues but manageable",
+      "confidence_score": 0.95,
+      "last_updated": "2026-01-14 21:47:31.731040",
+      "metadata": {},
+      "relationships": []
+    },
+    "Kvaesthus_20260114_212151": {
+      "id": "Kvaesthus_20260114_212151",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_212151",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.732774",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_212343": {
+      "id": "Kvaesthus_20260114_212343",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_212343",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.734350",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 140.0,
+        "risk_level": "HIGH",
+        "issues": [
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_212920": {
+      "id": "Kvaesthus_20260114_212920",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_212920",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.735751",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": null,
+        "risk_level": "HIGH",
+        "issues": [
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_214226": {
+      "id": "Kvaesthus_20260114_214226",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_214226",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.737576",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 145.0,
+        "risk_level": "CRITICAL",
+        "issues": [
+          " i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          ":\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "Kvaesthus_20260114_214718": {
+      "id": "Kvaesthus_20260114_214718",
+      "type": "project",
+      "name": "Project Kvaesthus_20260114_214718",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:31.739282",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 110.0,
+        "risk_level": "MEDIUM",
+        "issues": [
+          " skyldtes problemer med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er med Profinet kommunikation\n\n    Problemer oplevet:\n    - Fejl i sikkerhedssystemet (SIL 2 krav ikke opfyldt)\n    - Forsinkelse i I/O konfiguration (DI005, AI001 signalkonflikter)\n    - Defekt i frekvensomformer fra SEW Eurodrive\n\n    Løsninger implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ],
+        "solutions": [
+          " i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          " og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    ",
+          "er implementeret:\n    - Kommunikationsproblemet blev løst ved at opgradere Profinet switch\n    - Sikkerhedssystemet er nu rettet og certificeret\n    - I/O konflikter er fikseret i den endelige konfiguration\n    - Reservedele til frekvensomformere er bestilt\n\n    Hardware anvendt:\n    - Siemens S7-1500 PLC med Profinet\n    - WinCC SCADA system\n    - SEW Eurodrive frekvensomformere\n    - Endress+Hauser tryktransmittere\n\n    Anbefalinger til fremtidige projekter:\n    - Øg tidsestimat med 20% for Profinet konfiguration\n    - Inkluder ekstra testtid for SIL sikkerhedssystemer\n    - Bestil reservedele på forhånd for SEW komponenter\n    "
+        ]
+      },
+      "relationships": []
+    },
+    "emp_TEST001": {
+      "id": "emp_TEST001",
+      "type": "employee",
+      "name": "Test Engineer",
+      "description": "PLC Engineer - Expertise: Siemens, PROFINET, Safety",
+      "confidence_score": 0.16,
+      "last_updated": "2026-01-14 21:47:45.264280",
+      "metadata": {
+        "role": "PLC Engineer",
+        "expertise_areas": [
+          "Siemens",
+          "PROFINET",
+          "Safety"
+        ],
+        "hardware_experience": [
+          "Siemens S7-1500",
+          "WinCC"
+        ],
+        "certifications": [
+          "Siemens Certified"
+        ]
+      },
+      "relationships": []
+    },
+    "TEST_PROJ_001": {
+      "id": "TEST_PROJ_001",
+      "type": "project",
+      "name": "Project TEST_PROJ_001",
+      "description": "water project with Siemens + WinCC",
+      "confidence_score": 0.9,
+      "last_updated": "2026-01-14 21:47:45.264325",
+      "metadata": {
+        "industry": "water",
+        "hardware_combination": "Siemens + WinCC",
+        "estimated_hours": 120.0,
+        "actual_hours": 145.0,
+        "risk_level": "CRITICAL",
+        "issues": [
+          "PROFINET communication issues",
+          "SIL 2 certification delay"
+        ],
+        "solutions": [
+          "Upgraded network switches",
+          "Additional safety testing"
+        ]
+      },
+      "relationships": []
+    }
+  },
+  "edges": [
+    {
+      "source_id": "iec61508",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723718"
+    },
+    {
+      "source_id": "iec61511",
+      "target_id": "sil_certification",
+      "relationship_type": "supports",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723726"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "siemens_profinet",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723729"
+    },
+    {
+      "source_id": "iec61131",
+      "target_id": "rockwell_modbus",
+      "relationship_type": "enables",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723731"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723801"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723805"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_200227",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.723807"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.723808"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.723847"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.723853"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.723855"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200227",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.723857"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.724548"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.724550"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_200552",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.724552"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.724553"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.724563"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.724567"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.724569"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_200552",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.724570"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.725540"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.725542"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_201110",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.725544"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.725545"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.725555"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.725561"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.725563"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201110",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.725564"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.726227"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.726229"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_201606",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.726230"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.726231"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.726240"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.726244"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.726246"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_201606",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.726247"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.727690"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.727695"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_202412",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.727697"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.727698"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.727708"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.727712"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.727714"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_202412",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.727715"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.729549"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "risk_optimal",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.729556"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_203756",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.729558"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.729559"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.729582"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.729587"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.729590"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_203756",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.729591"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.731038"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "risk_medium",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.731042"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_205446",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.731044"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.731046"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.731057"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.731061"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.731063"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_205446",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.731065"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.732777"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.732779"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_212151",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.732781"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.732782"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.732792"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.732795"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.732797"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212151",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.732799"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.734355"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.734357"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_212343",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.734359"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.734360"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.734378"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.734383"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.734385"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212343",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.734386"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.735756"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "risk_high",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.735758"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_212920",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.735760"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.735762"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.735770"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.735776"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.735777"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_212920",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.735779"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.737580"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.737583"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_214226",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.737584"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.737585"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.737595"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.737600"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.737602"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214226",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.737603"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.739287"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "risk_medium",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.739290"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "Kvaesthus_20260114_214718",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:31.739291"
+    },
+    {
+      "source_id": "emp_EMP001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:31.739293"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.739305"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.739309"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:31.739311"
+    },
+    {
+      "source_id": "Kvaesthus_20260114_214718",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:31.739312"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "uses_hardware",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:45.264330"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "risk_critical",
+      "relationship_type": "has_risk_level",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:45.264333"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "TEST_PROJ_001",
+      "relationship_type": "worked_on",
+      "strength": 1.0,
+      "last_updated": "2026-01-14 21:47:45.264335"
+    },
+    {
+      "source_id": "emp_TEST001",
+      "target_id": "hw_Siemens___WinCC",
+      "relationship_type": "has_experience",
+      "strength": 0.8,
+      "last_updated": "2026-01-14 21:47:45.264337"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "siemens_profinet",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:45.264343"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "abb_safety",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:45.264348"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "should_follow",
+      "strength": 0.7,
+      "last_updated": "2026-01-14 21:47:45.264351"
+    },
+    {
+      "source_id": "TEST_PROJ_001",
+      "target_id": "sil_certification",
+      "relationship_type": "addresses_issue",
+      "strength": 0.9,
+      "last_updated": "2026-01-14 21:47:45.264352"
+    }
+  ],
+  "employees": {
+    "EMP001": {
+      "employee_id": "EMP001",
+      "name": "Jens Hansen",
+      "role": "Senior PLC Engineer",
+      "expertise_areas": [
+        "Siemens S7",
+        "PROFINET",
+        "SIL Safety"
+      ],
+      "hardware_experience": [
+        "Siemens S7-1500",
+        "WinCC",
+        "SEW Eurodrive"
+      ],
+      "project_history": [
+        "Kvæsthusbroen",
+        "Nordhavn"
+      ],
+      "certifications": [
+        "Siemens Certified",
+        "TÜV Functional Safety"
+      ],
+      "confidence_score": 0.29000000000000004,
+      "last_active": "2026-01-14 21:47:31.723736"
+    },
+    "EMP002": {
+      "employee_id": "EMP002",
+      "name": "Lars Jensen",
+      "role": "SCADA Specialist",
+      "expertise_areas": [
+        "WinCC",
+        "OPC UA",
+        "HMI Design"
+      ],
+      "hardware_experience": [
+        "Siemens WinCC",
+        "Wonderware"
+      ],
+      "project_history": [
+        "HOFOR Water Treatment"
+      ],
+      "certifications": [
+        "Siemens WinCC Expert"
+      ],
+      "confidence_score": 0.16,
+      "last_active": "2026-01-14 21:47:31.723757"
+    },
+    "TEST001": {
+      "employee_id": "TEST001",
+      "name": "Test Engineer",
+      "role": "PLC Engineer",
+      "expertise_areas": [
+        "Siemens",
+        "PROFINET",
+        "Safety"
+      ],
+      "hardware_experience": [
+        "Siemens S7-1500",
+        "WinCC"
+      ],
+      "project_history": [
+        "Test Project"
+      ],
+      "certifications": [
+        "Siemens Certified"
+      ],
+      "confidence_score": 0.16,
+      "last_active": "2026-01-14 21:47:45.264280"
+    }
+  },
+  "last_updated": "2026-01-14 21:47:45.264642"
+}
