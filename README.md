@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Self-Learning Impact Analysis System
 
 A RAG-based Self-Learning Impact Analysis System for industrial automation projects, specifically designed for Danish HOFOR documents.
@@ -6,7 +5,7 @@ A RAG-based Self-Learning Impact Analysis System for industrial automation proje
 ## 📁 Project Structure
 
 ```
-/Users/bogdanandone/Desktop/Optimization/svsamletopgavebeskrivelse/
+HOFOR-Knowledge-Graph-AI/
 ├── data/                    # 📁 Raw HOFOR PDFs (22 documents)
 ├── src/                     # 🏗️  Core engine modules
 │   ├── config.py            # Configuration settings
@@ -134,7 +133,9 @@ The system demonstrates **measurable learning improvement**:
 **Professional RAG System for Industrial Automation Impact Analysis** 🎯
 
 *Built for HOFOR's Danish industrial automation projects with persistent learning and intelligent risk assessment.*
-=======
+
+## Projektresultater (dansk sammenfatning)
+
 1. Projektets mål vs. Resultat
 
 Formålet med dette projekt var at transformere HOFOR fra en organisation baseret på individuel viden (hvor kritisk info kun findes i hovedet på enkelte ingeniører) til en organisation baseret på kollektiv hukommelse (hvor viden er lagret i en intelligent Knowledge Graph). Gennem 12 systematiske projekt-iterationer har systemet succesfuldt kortlagt 132 unikke vidensentiteter og 108 kritiske forbindelser.
@@ -160,4 +161,3 @@ Integration af live sensordata til prædiktiv vedligeholdelse.
 4. Endelig vurdering
 
 "Mission Accomplished". HOFOR er ikke længere sårbar over for tab af viden ved personalegennemstrømning (Joan Nielsen-faktoren). Den organisatoriske hukommelse er nu permanent, søgbar og vokser automatisk for hvert nyt projekt, der registreres.
->>>>>>> 39084c9365ca534dafec9d0d46184a241ba78fc7
